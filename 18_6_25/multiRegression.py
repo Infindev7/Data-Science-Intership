@@ -3,7 +3,9 @@ from sklearn.linear_model import LinearRegression
 
 class MultiRegression:
     def __init__(self):
-        self.params = None
+        self.params = np.zeros(
+            int(np.random.random()), float
+        )[:,np.newaxis]
 
     def fit(self, X, y):
         bias = np.ones(len(X))
@@ -47,10 +49,10 @@ if __name__ == "__main__":
     )
 
     y_hat = lr.predict(X_test)
-    print(y_hat)
+    print('Hardcoded Model:',y_hat)
 
 
     model = LinearRegression()
     model.fit(X, y)
     y_pred = model.predict(X_test)
-    print(y_pred)
+    print('SKlearn Model:',y_pred)
