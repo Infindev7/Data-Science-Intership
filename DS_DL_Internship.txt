@@ -1,0 +1,33 @@
+Day 1:
+Setup Day
+
+Day 2: Data Strategies
+- Python Venv Setup and Implementation
+- Jupyter notebook setup in Day Folder
+- Dataset Importing
+- Data Imputation
+- Label Encoding
+- One Hot Encoding
+
+Day 3: Machine Learning
+- Types of Analysis: Descriptive and Predictive
+- Understanding Predictive Analysis with Examples
+- Understanding Supervised and Unsupervised Learning (Solving Seen/Known[Supervised] and Unknown[Unsupervised] Problems)
+- A/B Testing: Train and Test (Comparison in Supervised and Unsupervised)
+--	90/10 Data Rule in  Train and Test Data (Supervised) [Ability to derive an answer based on trained data question]
+---		Contains answer for all questions when trained
+--	60/40 Data Rule in Train and Test  Data (Unsupervised) [Deriving answer from a certain pattern]
+---		Regression:
+----			Ability to predict continuous values
+---		Classification:
+----			Ability to predict discrete values
+- Understanding Regression: Parametric and Non-parametric
+--	Parametric: Linear, Linear discriminate Analysis (Traceable Method of Prediction)
+--	Non-Parametric: RandomFirst, k-neighbor, SVR, QDA (Non-Traceable Method of Prediction)
+- Understanding Parametric Regression: Linear Regression
+--	Tracing a Common Line that could represent all points in a data, thereby plotting a linear function
+--	y = a + bx + e (Known: x,y)(Unknown: a,b)(e: Error)
+--	Implementation using Python
+- Understanding Multi-Linear Regression [Least Squares Method] (Find Video Examples)
+--	y^ = ß^
+-- 	((X^T . X )^-1 . X^T) . y [Where X is a matrix of all Columns]
