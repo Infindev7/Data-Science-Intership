@@ -1,5 +1,5 @@
 import numpy as np
-from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
 
 class LinearRegression:
     def __init__(self):
@@ -18,8 +18,7 @@ class LinearRegression:
 
     def predict(self, Xi):
         y_hat = self.b0 + (self.b1 * Xi)
-        return y_hat
-
+        return np.squeeze(y_hat)
 
 
 if __name__ == "__main__":
@@ -33,14 +32,21 @@ if __name__ == "__main__":
 
     LR = LinearRegression()
     b0, b1 = LR.fit(X=heights,y=weights)
-    print(f'The value of intercept:{b0}\nThe value of slope:{b1}')
+    #print(f'The value of intercept:{b0}\nThe value of slope:{b1}')
 
-    Xi = [[176]]
-    y_hat = LR.predict(Xi)
-    print(f'Value of Prediction of weight for height of {Xi}cm: {y_hat}')
+    y_hat = LR.predict(Xi=heights)
+    #print(f'Value of Prediction of weight for height of cm: {y_hat}')
 
+    print(f'True Label: {weights}')
+    print(f'Predicted Label: {y_hat}')
 
-    model = LinearRegression()
-    model.fit(heights,weights)
-    y_pred = model.predict(Xi)
-    print(f'Value of Prediction of weight for height of {Xi}cm: {y_pred}')
+    def meanSquaredError(y_true, y_pred):
+        error = y_true - y_pred
+        squaredError = error**2
+        return np.mean(squaredError)
+
+    mse = meanSquaredError(y_true=weights,y_pred=y_hat)
+    print(mse)
+
+    skmse = mean_squared_error(y_true=weights,y_pred=y_hat)
+    print(skmse)

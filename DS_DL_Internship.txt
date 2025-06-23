@@ -26,8 +26,44 @@ Day 3: Machine Learning
 --	Non-Parametric: RandomFirst, k-neighbor, SVR, QDA (Non-Traceable Method of Prediction)
 - Understanding Parametric Regression: Linear Regression
 --	Tracing a Common Line that could represent all points in a data, thereby plotting a linear function
---	y = a + bx + e (Known: x,y)(Unknown: a,b)(e: Error)
+--	y = a + bx + e (Known: x, y)(Unknown: a, b)(e: Error)
 --	Implementation using Python
 - Understanding Multi-Linear Regression [Least Squares Method] (Find Video Examples)
 --	y^ = ß^
 -- 	((X^T . X )^-1 . X^T) . y [Where X is a matrix of all Columns]
+
+Day 4: PostgreSQL
+- Understanding SQL
+- Difference btw Excel and Database
+- Structure of SQL and Relational Database Management System [RDBMS]
+- Data Relations using Data Diagram
+- Understanding Data Types
+--	char, varchar, int, float, bool, date, datetime
+- Understanding Primary and Foreign Keys and their Differences
+- Understanding Constraints
+- Operating on PostgreSQL
+- Operators in SQL
+- Refer PPT
+
+Day 5: PostgreSQL continuation
+
+
+
+Day 6: Understanding Model Validation
+- Checking Validity of a Model
+- Eg: Loss Function and Loss Metric in Regression (Mean Squared Error)
+- Mean Squared Error (MSE)
+--  MSE = 1/N(Sum(i=1)(n){yi - ^yi})
+--  Error = yi - ^yi
+--  Error^2 = (yi - ^yi)^2
+- Converging Loss Function (Loss Optimisation)
+--  Gradient Descent (Loss Optimiser)
+---     Loss = 1/N(Sum(i=1)(n){yi - {b0 + b1(xi)}})
+----        Step1: Perfrom Convergence
+----        Step2: Take Learning Value Arbitrary 
+----        Step3: Multiply derivative with alpha(a) and subtract from original parameters (b1 & b0)
+----        Epoch: Iterations of For loop
+---     Implementation
+- Understanding Classification: Using machine learning to Classify in Problems
+--  Logistic Regression:  Binary Classification / Supervised / Parametric
+--  Converting Linear Line Eq into non-linear function
