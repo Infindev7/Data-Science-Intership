@@ -66,4 +66,20 @@ Day 6: Understanding Model Validation
 ---     Implementation
 - Understanding Classification: Using machine learning to Classify in Problems
 --  Logistic Regression:  Binary Classification / Supervised / Parametric
---  Converting Linear Line Eq into non-linear function
+--  Converting Linear Line Eq into non-linear function (Sigmoid Function)
+
+Day 7:
+- Understanding Deep Learning
+--  Artificial Neural Network (ANN)
+---     Nodes and Coonnections
+---     Weights, Biases
+- Understanding Feed Forward ANN and Back Propogation
+- Classification in ANN
+--  Examples of MNIST - Dataset of Hadwritten digits
+---     Activation Function -  Convert linear to Non-Linear Functions
+----        ReLU : x < 0 = 0; x > 0 = x
+----        tanh : f(x) = (e^x - e^-x)/(e^x + e^-x)
+----        sigmoid : o(x) = 1/(1 + e^-x)
+----        SoftMax : SM(x) =  e^x/sum(e^x) => ArgMax(SM(x))
+-----           It sustains multiple label values in 0-1 probablity Range
+-----           pick highest probablity value using max arg function eg: ArgMax
